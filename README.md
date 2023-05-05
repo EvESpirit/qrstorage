@@ -1,6 +1,6 @@
 # QR Storage
 
-## This repository contains a set of two Python scripts which fulfill automatic encoding/decoding duties to and from version 40 QR codes.
+## This repository contains a set of two Python scripts which fulfill automatic file encoding/decoding duties to and from version 40 QR codes.
 
 ## Theory
 #### The logic is very straightforward - the file fed into the encoder is first turned into Base64, then split into adequate chunks. A preamble is added to the first chunk in the following format:
