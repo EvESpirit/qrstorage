@@ -17,3 +17,7 @@
 ### 3. Install project requirements using ```pip install -r requirements.txt``` in your native CLI.
 ### 4. Run the desired script using ```python encoder.py``` or ```python decoder.py``` in your native CLI.
 ### 5. Follow on-screen instructions.
+
+### Note that it's highly recommended to first compress whatever you're trying to represent as QR codes. I personally recommend CMIX v19 or ZPAQ, however, WinRAR seems sufficent for most practical uses, though obviously less overall data volume means less QR chunks. There is no source data manipulation code in this repository at all (no encryption, no real encapsulation, no version tags, no compression, no error correction) so user's due diligence is required for maximum usability. Both WinRAR and CMIX v19/ZPAQ offer excellent source of every feature mentioned without me mostly unnecessarily bloating this elegant and short script.
+
+### Please also note that the error correction part is also important. If any/all of your QR codes get damaged, the QR code's built-in error correction likely will not save you, since it's set to the minimum possible level to enable more data bits to be carried in a single chunk. The minimum QR code error correction level is only capable of recovering up to 7% of any given QR code chunk - which only works to around 300 characters out of the roughly 4300 characters per chunk (including preamble data if the chunk in question happens to be the first one).
